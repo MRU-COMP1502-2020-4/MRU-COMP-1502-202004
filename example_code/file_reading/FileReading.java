@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class FileReading {
 
     public static void main(String[] args) {
-	
+	// a quick intro to file reading with comments from me to help
+	// it's also worth taking a look at Chapter 7 of the text book
 	
 	// Every file needs a name, this is more complicated than just 
 	String filename = "notest.file";
