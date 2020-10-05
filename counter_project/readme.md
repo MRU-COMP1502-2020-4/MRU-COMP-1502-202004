@@ -18,6 +18,8 @@ What behaviours do we expect the system to have
 * Overall
    * Get a count of the current people inside
    * Get a count of total people over the day
+   * Set a limit on number of people in
+   * Check if current occupancy is over the limit
 
 ## Test Plan
 
@@ -29,3 +31,4 @@ What behaviours do we expect the system to have
 * Overall
    * A person entering at any door, should get added to the current total, should get added to the daily total
    * A person exiting at any door, should get removed from the current total, should not change the daily total
+   * Adding a person over the occupancy limit should change the check to not allow more people
