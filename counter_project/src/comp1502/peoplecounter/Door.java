@@ -5,6 +5,11 @@ public class Door {
 	private int numberOfEnterances;
 	private int numberOfExits;
 	
+	public Door() {
+		numberOfEnterances = 0;
+		numberOfExits = 0;
+	}
+	
 	public void countEnterance() {
 		numberOfEnterances++;
 		
