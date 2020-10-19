@@ -10,8 +10,8 @@ What behaviours do we expect the system to have
    * Since we want this to be generic, we should be set up any building with any number of enterances.
    
 * At a door
-   * Count a person entering
-   * Count a person exiting
+   * ~~Count a person entering~~
+   * ~~Count a person exiting~~
    * Get a count of the people who entered
    * Get a count of the people who exited
    
