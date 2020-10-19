@@ -24,7 +24,7 @@ What behaviours do we expect the system to have
 ## Test Plan
 
 * Door
-   * Initial state, should begin with no people entering, no people exiting
+   * ~~Initial state, should begin with no people entering, no people exiting~~
    * Count Person entering, after method is called count of people entering should go up by 1
    * Count Person exiting, after method is called count of people exiting should go up by 1
    
