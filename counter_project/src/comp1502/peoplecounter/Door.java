@@ -18,5 +18,14 @@ public class Door {
 	public int getNumberOfEnterances() {
 		return numberOfEnterances;
 	}
+
+	/**
+	 * @return the numberOfExits
+	 */
+	public int getNumberOfExits() {
+		return numberOfExits;
+	}
+	
+	
 	
 }
