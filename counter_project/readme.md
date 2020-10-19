@@ -12,8 +12,8 @@ What behaviours do we expect the system to have
 * At a door
    * ~~Count a person entering~~
    * ~~Count a person exiting~~
-   * Get a count of the people who entered
-   * Get a count of the people who exited
+   * ~~Get a count of the people who entered~~
+   * ~~Get a count of the people who exited~~
    
 * Overall
    * Get a count of the current people inside
