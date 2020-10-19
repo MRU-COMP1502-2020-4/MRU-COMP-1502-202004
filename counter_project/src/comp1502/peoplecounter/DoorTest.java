@@ -7,8 +7,10 @@ import org.junit.jupiter.api.Test;
 class DoorTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testConstructor() {
+		Door testDoor = new Door();
+		assertEquals(0, testDoor.getNumberOfEnterances());
+		assertEquals(0, testDoor.getNumberOfExits());
 	}
 
 }
