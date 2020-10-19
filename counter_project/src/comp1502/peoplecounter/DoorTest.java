@@ -24,5 +24,17 @@ class DoorTest {
 		
 		assertEquals(expectedValue, testDoor.getNumberOfEnterances());
 	}
+	
+	@Test
+	void testCountExiting() {
+		Door testDoor = new Door();
+		
+		int initalValue = testDoor.getNumberOfExits();
+		int expectedValue = initalValue + 1;
+		
+		testDoor.countExit();
+		
+		assertEquals(expectedValue, testDoor.getNumberOfExits());
+	}
 
 }
