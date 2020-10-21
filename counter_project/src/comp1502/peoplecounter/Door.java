@@ -1,5 +1,13 @@
 package comp1502.peoplecounter;
 
+/**
+ * 
+ * Keeps track of the number of people entering and exiting a building
+ * through a specific door.
+ * 
+ * @author tjkendon
+ *
+ */
 public class Door {
 	
 	private int numberOfEnterances;
