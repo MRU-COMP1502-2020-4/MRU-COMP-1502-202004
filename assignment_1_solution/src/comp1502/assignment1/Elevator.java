@@ -8,6 +8,7 @@ public class Elevator {
 	private ArrayList<Floor> floors;
 	
 	private Floor currentFloor;
+	private Floor destinationFloor;
 	
 	private Person rider;
 	
@@ -15,6 +16,7 @@ public class Elevator {
 		this.name = name;
 		this.floors = floors;
 		this.currentFloor = floors.get(0);
+		this.destinationFloor = null;
 		this.rider = null;
 		
 	}
@@ -28,8 +30,7 @@ public class Elevator {
 	}
 
 	public Floor getDestinationFloor() {
-		// TODO Auto-generated method stub
-		return null;
+		return destinationFloor;
 	}
 
 	public Person getPersonRiding() {
@@ -57,7 +58,7 @@ public class Elevator {
 	}
 
 	public void call(Floor floor) {
-		// TODO Auto-generated method stub
+		this.destinationFloor = floor;
 		
 	}
 
