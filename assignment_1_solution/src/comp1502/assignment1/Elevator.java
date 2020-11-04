@@ -65,6 +65,18 @@ public class Elevator {
 	public void call(Floor floor) {
 		this.destinationFloor = floor;
 		
+		// may want to create a private method to do this
+		int destinationIndex = floors.indexOf(destinationFloor);
+		int currentIndex = floors.indexOf(currentFloor);
+		
+		if (destinationIndex > currentIndex) {
+			elevatorDirection = Direction.MOVING_UP;
+		} else if (destinationIndex < currentIndex) {
+			elevatorDirection = Direction.MOVING_DOWN;
+		} else {
+			elevatorDirection = Direction.HOLDING;
+		}
+		
 	}
 
 	public Person exit() {
@@ -76,8 +88,18 @@ public class Elevator {
 	public void move() {
 		if (elevatorDirection == Direction.HOLDING) {
 			return;
+		} else if (elevatorDirection == Direction.MOVING_UP) {
+			int currentIndex = floors.indexOf(currentFloor);
+			currentFloor = floors.get(currentIndex + 1);
+		} else if (elevatorDirection == Direction.MOVING_DOWN) {
+			int currentIndex = floors.indexOf(currentFloor);
+			currentFloor = floors.get(currentIndex - 1);
 		}
 		
+		checkIfArrived();
+	}
+	
+	private void checkIfArrived() {
 		
 	}
 
