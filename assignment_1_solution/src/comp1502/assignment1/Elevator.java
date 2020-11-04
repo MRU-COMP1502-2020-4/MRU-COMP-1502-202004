@@ -103,5 +103,12 @@ public class Elevator {
 			elevatorDirection = Direction.HOLDING;
 		}
 	}
+	
+	public String toString() {
+		if (rider == null) {
+			return name + "-Nobody";
+		} 
+		return name + "-" + rider.getName();
+	}
 
 }

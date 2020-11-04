@@ -154,6 +154,35 @@ class ElevatorTest {
 		assertEquals(floors.get(1), e.getCurrentFloor());
 		assertFalse(e.isMoving());
 	}
+	
+	@Test 
+	void testToStringWithoutPerson() {
+		ArrayList<Floor> floors = new ArrayList<>();
+		floors.add(new Floor("1"));
+		floors.add(new Floor("2"));
+		floors.add(new Floor("3"));
+		
+		String name = "Test";
+		
+		Elevator e = new Elevator(name, floors);
+		assertEquals(name+"-Nobody", e.toString());
+	}
+	
+	@Test 
+	void testToStringWithPerson() {
+		ArrayList<Floor> floors = new ArrayList<>();
+		floors.add(new Floor("1"));
+		floors.add(new Floor("2"));
+		floors.add(new Floor("3"));
+		
+		String name = "Test";
+		
+		Elevator e = new Elevator(name, floors);
+		String personName = "Alice";
+		Person p = new Person(personName);
+		e.enter(p);
+		assertEquals(name+"-"+personName, e.toString());
+	}
 
 	
 }
