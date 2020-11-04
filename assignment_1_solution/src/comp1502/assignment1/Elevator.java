@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Elevator {
 
+	private enum Direction {MOVING_UP, MOVING_DOWN, HOLDING}; 
+	
 	private String name;
 	private ArrayList<Floor> floors;
 	
@@ -12,12 +14,15 @@ public class Elevator {
 	
 	private Person rider;
 	
+	private Direction elevatorDirection;
+	
 	public Elevator(String name, ArrayList<Floor> floors) {
 		this.name = name;
 		this.floors = floors;
 		this.currentFloor = floors.get(0);
 		this.destinationFloor = null;
 		this.rider = null;
+		this.elevatorDirection = Direction.HOLDING;
 		
 	}
 
@@ -69,7 +74,10 @@ public class Elevator {
 	}
 
 	public void move() {
-		// TODO Auto-generated method stub
+		if (elevatorDirection == Direction.HOLDING) {
+			return;
+		}
+		
 		
 	}
 
