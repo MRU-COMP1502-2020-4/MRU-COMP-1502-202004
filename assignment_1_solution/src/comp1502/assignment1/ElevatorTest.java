@@ -108,6 +108,7 @@ class ElevatorTest {
 		e.call(floors.get(2));
 		e.move();
 		e.move();
+		assertEquals(floors.get(2), e.getCurrentFloor());
 		assertFalse(e.isMoving());
 		
 	}
@@ -138,17 +139,19 @@ class ElevatorTest {
 		floors.add(new Floor("1"));
 		floors.add(new Floor("2"));
 		floors.add(new Floor("3"));
+		floors.add(new Floor("4"));
 		
 		String name = "Test";
 		
 		Elevator e = new Elevator(name, floors);
 		
-		e.call(floors.get(2));
+		e.call(floors.get(3));
 		e.move();
 		e.move();
-		e.call(floors.get(0));
+		e.call(floors.get(1));
 		e.move();
 		e.move();
+		assertEquals(floors.get(1), e.getCurrentFloor());
 		assertFalse(e.isMoving());
 	}
 
