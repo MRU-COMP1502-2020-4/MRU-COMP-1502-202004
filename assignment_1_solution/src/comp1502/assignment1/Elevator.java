@@ -43,8 +43,7 @@ public class Elevator {
 	}
 
 	public boolean isMoving() {
-		// TODO Auto-generated method stub
-		return false;
+		return elevatorDirection != Direction.HOLDING;
 	}
 
 	public boolean isOnFloor(Floor floor) {
@@ -96,11 +95,13 @@ public class Elevator {
 			currentFloor = floors.get(currentIndex - 1);
 		}
 		
-		checkIfArrived();
+		stopIfArrived();
 	}
 	
-	private void checkIfArrived() {
-		
+	private void stopIfArrived() {
+		if (currentFloor.equals(destinationFloor)) {
+			elevatorDirection = Direction.HOLDING;
+		}
 	}
 
 }
