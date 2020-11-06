@@ -8,6 +8,11 @@ public class Main {
 		
 		animal.eat();
 		animal.speak();
+		
+		Cat rover = new Cat("Rover");
+		
+		rover.eat();
+		rover.speak();
 
 	}
 
