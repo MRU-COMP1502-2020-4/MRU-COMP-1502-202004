@@ -13,7 +13,19 @@ public class Main {
 		
 		rover.eat();
 		rover.speak();
-
+	
+		rover.setFavouriteToy("Ball of String");
+		
+		Marmot gold = new Marmot("Gold");
+		
+		gold.eat();
+		gold.speak();
+		
+		gold.dig();
+		
+		
+				
+		
 	}
 
 }
