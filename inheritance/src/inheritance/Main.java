@@ -3,7 +3,11 @@ package inheritance;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Animal animal = new Animal("Fluffly");
+		
+		animal.eat();
+		animal.speak();
 
 	}
 
